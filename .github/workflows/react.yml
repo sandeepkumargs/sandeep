@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Navigate to the folder
-        run: cd /home/sandeep/my-app
+        run: my-app
       
       - name: Remove the old node_modules
         run: rm -rf node_modules
