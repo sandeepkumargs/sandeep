@@ -1,0 +1,38 @@
+name: react-app
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Navigate to the folder
+        run: cd /home/sandeep/my-app
+      
+      - name: Remove the old node_modules
+        run: rm -rf node_modules
+
+      - name: Install new dependencies
+        run: npm install
+
+      - name: Run the shell script
+        run: ./sandeep11.sh
+
+
+
+
+
+
+
+
+
+
+
+
+
