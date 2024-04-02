@@ -19,7 +19,7 @@ jobs:
         run: rm -rf node_modules
 
       - name: Install new dependencies
-        run: npm install
+        run: npm install -i
 
       - name: Run the shell script
         run: ./sandeep11.sh
