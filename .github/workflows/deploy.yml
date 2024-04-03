@@ -16,7 +16,9 @@ jobs:
 
       - name: SSH Deploy Action
         uses: ./.github/actions/ssh-deploy.yml
-
+        with:
+          ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
+          remote-host: ${{ secrets.HOST_DNS }}
 
       - name: Run the program
         run: npm start
