@@ -11,15 +11,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
       - name: SSH Deploy Action
-        uses: ./.github/actions/ssh-deploy.yml
-        with:
-          ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
-          remote-host: ${{ secrets.HOST_DNS }}
-
+        uses: ./.github/actions/react
+        
       - name: Run the program
         run: npm start
 
