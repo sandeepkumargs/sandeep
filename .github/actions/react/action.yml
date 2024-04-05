@@ -16,7 +16,6 @@ inputs:
 
 runs:
   using: 'composite'
-  shell: bash  # Specify the shell property here
   steps:
     - name: SSH deploy step 1
       run: |
