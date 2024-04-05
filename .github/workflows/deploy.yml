@@ -1,4 +1,4 @@
-# .github/workflows/deploy.yml
+#.github/workflows/deploy.yml
 
 name: SSH Deployment
 
@@ -11,12 +11,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: SSH Deploy Action
         uses: ./.github/actions/react
-        
-      - name: Run the program
-        run: npm start
+        with:
+		  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          server-address: ${{ secrets.SERVER_ADDRESS }}
+          remote-directory: '/var/www/html'
+          local-directory: '~/sandeep11/sandeep/my-app/build/*'
+
+     
 
