@@ -9,6 +9,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Check SSH Availability
+        run: ssh -V
+
+      - name: Install SSH
+        run: sudo apt-get install -y ssh
+
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -19,5 +25,4 @@ jobs:
           server-address: ${{ secrets.SERVER_ADDRESS }}
           remote-directory: '/var/www/html'
           local-directory: '~/sandeep11/sandeep/my-app/build'
-        shell: bash
 
