@@ -17,11 +17,8 @@ jobs:
       - name: SSH Deploy Action
         uses: ./.github/actions/react
         with:
-			ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-			server-address: ${{ secrets.SERVER_ADDRESS }}
-			remote-directory: '/var/www/html'
-			local-directory: '~/sandeep11/sandeep/my-app/build'
-
-     
-
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          server-address: ${{ secrets.SERVER_ADDRESS }}
+          remote-directory: '/var/www/html'
+          local-directory: '~/sandeep11/sandeep/my-app/build'
 
