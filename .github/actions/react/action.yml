@@ -22,8 +22,9 @@ runs:
         ssh -i ${{ inputs.ssh-private-key }} ${{ inputs.server-address }} 'echo "Deleting existing files in remote directory..." && sudo rm -rf ${{ inputs.remote-directory }}/*'
         ssh -i ${{ inputs.ssh-private-key }} ${{ inputs.server-address }} 'echo "Deploying files to server..."'
         rsync -avz --delete ${{ inputs.local-directory }}/* -e "ssh -i ${{ inputs.ssh-private-key }}" ${{ inputs.server-address }}:${{ inputs.remote-directory }}
-
+      shell: bash
     - name: SSH deploy step 2
       run: |
         ssh -i ${{ inputs.ssh-private-key }} ${{ inputs.server-address }} 'echo "Deployment completed."'
+      shell: bash
 
