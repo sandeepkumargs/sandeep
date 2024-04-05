@@ -1,5 +1,3 @@
-#.github/workflows/deploy.yml
-
 name: SSH Deployment
 
 on:
@@ -21,4 +19,5 @@ jobs:
           server-address: ${{ secrets.SERVER_ADDRESS }}
           remote-directory: '/var/www/html'
           local-directory: '~/sandeep11/sandeep/my-app/build'
-		shell: bash
+        shell: bash
+
