@@ -13,7 +13,7 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          npm install
+          npm install --prefix /home/runner/work/sandeep/sandeep/my-app/package.json
           npm run build --if-present
           npm test
 
