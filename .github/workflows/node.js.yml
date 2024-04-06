@@ -29,12 +29,6 @@ jobs:
             package-lock.json
           retention-days: 5
 
-      - name: Archive code coverage results
-        uses: actions/upload-artifact@v3
-        with:
-          name: code-coverage-report
-          path: output/test/code-coverage.html
-
       - name: Download a single artifact
         uses: actions/download-artifact@v3
         with:
