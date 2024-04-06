@@ -22,7 +22,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dist
-          path: my_file.txt
           retention-days: 5
 
       - name: Archive code coverage results
