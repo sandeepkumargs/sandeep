@@ -5,7 +5,7 @@ inputs:
     description: '/home/sandeep/goac-sandeep/goac-sandeep.pem'
     required: true
   server-address:
-    description: 'ec2-35-154-112-71.ap-south-1.compute.amazonaws.com'
+    description: 'ec2-13-232-52-59.ap-south-1.compute.amazonaws.com'
     required: true
   remote-directory:
     description: '/var/www/html'
