@@ -2,7 +2,7 @@ name: SSH Deploy Action
 
 inputs:
   ssh-private-key:
-    description: '/home/sandeep/goac-sandeep'
+    description: '/home/sandeep/goac-sandeep/goac-sandeep.pem'
     required: true
   server-address:
     description: 'ec2-35-154-112-71.ap-south-1.compute.amazonaws.com'
