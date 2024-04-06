@@ -11,7 +11,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: npm install, build, and test
+      - name: Install depandencies and run npm command
+        working-directory: ./myapp
         run: |
           npm install --prefix /home/runner/work/sandeep/sandeep/my-app/package.json
           npm run build --if-present
