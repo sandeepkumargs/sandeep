@@ -14,7 +14,7 @@ jobs:
       - name: Install depandencies and run npm command
         working-directory: my-app/my-app
         run: |
-          npm install --prefix /home/runner/work/sandeep/sandeep/my-app/package.json
+          npm install 
           npm run build --if-present
           npm test
 
