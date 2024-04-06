@@ -22,11 +22,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build
-          path: |
-            build
-            node_modules
-            package.json
-            package-lock.json
+          path: ./
           retention-days: 5
 
       - name: Download a single artifact
